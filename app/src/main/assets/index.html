@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مدرسه من</title>
+    <style>
+        body { font-family: Tahoma, Arial, sans-serif; background-color: #f4f7f6; margin: 0; padding: 20px; }
+        .header { text-align: center; color: #333; margin-bottom: 20px; }
+        .grid-container { display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px; }
+        .card { background-color: white; border-radius: 15px; padding: 20px; text-align: center; box-shadow: 0 4px 8px rgba(0,0,0,0.1); cursor: pointer; transition: transform 0.2s; border: 1px solid #eee; }
+        .card:active { transform: scale(0.95); background-color: #e0f2fe; }
+        .icon { font-size: 30px; margin-bottom: 10px; }
+        .title { font-size: 16px; font-weight: bold; color: #555; }
+        .profile-card { grid-column: span 2; background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); color: white; }
+        .profile-card .title { color: white; }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h2>دبیرستان هوشمند</h2>
+        <p>خوش آمدید، کاربر عزیز</p>
+    </div>
+
+    <div class="grid-container">
+        <div class="card profile-card" onclick="alert('بخش پروفایل به زودی فعال می‌شود')">
+            <div class="icon">👤</div>
+            <div class="title">پروفایل کاربری</div>
+        </div>
+        <div class="card" onclick="alert('بخش رویدادها')"><div class="icon">📅</div><div class="title">رویدادها</div></div>
+        <div class="card" onclick="alert('بخش تکالیف')"><div class="icon">📝</div><div class="title">تکالیف</div></div>
+        <div class="card" onclick="alert('بخش کلاس مجازی')"><div class="icon">💻</div><div class="title">کلاس مجازی</div></div>
+        <div class="card" onclick="alert('بخش آزمون‌ها')"><div class="icon">✏️</div><div class="title">آزمون‌ها</div></div>
+        <div class="card" onclick="alert('بخش شهریه')"><div class="icon">💳</div><div class="title">شهریه</div></div>
+        <div class="card" onclick="alert('بخش نمرات')"><div class="icon">📊</div><div class="title">نمرات</div></div>
+        <div class="card" onclick="alert('بخش انضباطی')"><div class="icon">⚖️</div><div class="title">انضباطی</div></div>
+        <div class="card" onclick="alert('بخش جدول برترین‌ها')"><div class="icon">🏆</div><div class="title">جدول برترین‌ها</div></div>
+    </div>
+
+</body>
+</html>

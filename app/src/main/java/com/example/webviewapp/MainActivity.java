@@ -13,8 +13,8 @@ public class MainActivity extends Activity {
         webView.setWebViewClient(new WebViewClient());
         webView.getSettings().setJavaScriptEnabled(true);
         
-        // اینجا آدرس سایتی که می‌خواهی باز شود را وارد کن
-        webView.loadUrl("https://www.google.com"); 
+        // اینجا به جای سایت گوگل، فایل محلی خودمان را باز می‌کنیم
+        webView.loadUrl("file:///android_asset/index.html"); 
         
         setContentView(webView);
     }
