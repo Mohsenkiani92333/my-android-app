@@ -12,14 +12,11 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         WebView webView = new WebView(this);
         webView.setWebViewClient(new WebViewClient());
-        
-        // فعال کردن جاوااسکریپت و کوکی‌ها برای کارکرد صحیح سایت
         webView.getSettings().setJavaScriptEnabled(true);
         webView.getSettings().setDomStorageEnabled(true);
         CookieManager.getInstance().setAcceptCookie(true);
         
-        // اتصال به سایت شما
-        webView.loadUrl("https://trendplasco.ir/"); 
+        webView.loadUrl("file:///android_asset/index.html"); 
         
         setContentView(webView);
     }
