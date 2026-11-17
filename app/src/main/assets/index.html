@@ -3,12 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <script src="https://cdn.jsdelivr.net/npm/phaser@3.60.0/dist/phaser.min.js"></script>
+    <script src="phaser.min.js"></script>
+    <script src="socket.io.min.js"></script>
     <style> body { margin: 0; padding: 0; overflow: hidden; background-color: #2c3e50; } </style>
 </head>
 <body>
-    <script src="http://localhost:3000/socket.io/socket.io.js"></script>
+    <div id="error-log" style="color: red; position: absolute; top: 10px; left: 10px; z-index: 999; font-family: monospace;"></div>
     <script>
+        window.onerror = function(msg, url, line) {
+            document.getElementById('error-log').innerHTML += "Error: " + msg + "<br>";
+        };
+
         const socket = io("http://localhost:3000"); 
         let config = {
             type: Phaser.AUTO,
