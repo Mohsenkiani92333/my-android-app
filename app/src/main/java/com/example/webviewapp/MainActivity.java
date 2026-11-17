@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.app.Activity;
+import android.webkit.CookieManager;
 
 public class MainActivity extends Activity {
     @Override
@@ -11,10 +12,14 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         WebView webView = new WebView(this);
         webView.setWebViewClient(new WebViewClient());
-        webView.getSettings().setJavaScriptEnabled(true);
         
-        // اینجا به جای سایت گوگل، فایل محلی خودمان را باز می‌کنیم
-        webView.loadUrl("file:///android_asset/index.html"); 
+        // فعال کردن جاوااسکریپت و کوکی‌ها برای کارکرد صحیح سایت
+        webView.getSettings().setJavaScriptEnabled(true);
+        webView.getSettings().setDomStorageEnabled(true);
+        CookieManager.getInstance().setAcceptCookie(true);
+        
+        // اتصال به سایت شما
+        webView.loadUrl("https://trendplasco.ir/"); 
         
         setContentView(webView);
     }
